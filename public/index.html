@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+
+    <title></title>
+
+    <script src="http://43.148.14.7:4000/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+
+  <body onload="init()">
+      <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
+      <div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+      <div id="green" onclick="color(this)"></div>
+      <div id="blue" onclick="color(this)"></div>
+      <div id="red" onclick="color(this)"></div>
+      <div id="yellow" onclick="color(this)"></div>
+      <div id="orange" onclick="color(this)"></div>
+      <div id="black" onclick="color(this)"></div>
+      <div id="eraser">Eraser</div>
+      <div id="white" onclick="color(this)"></div>
+      <img id="canvasimg" style="display:none;">
+      <input type="button" value="save" id="btn" size="30" onclick="emitSave()" style="position:absolute;top:55%;left:10%;">
+      <input type="button" value="clear" id="clr" size="23" onclick="emitErase()" style="position:absolute;top:55%;left:15%;">
+  </body>
+</html>
